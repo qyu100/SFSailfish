@@ -13,7 +13,7 @@ from benchmark.remote import Bench, BenchError
 def local(ctx, debug=False, consensus_only=True, header_size=512):
     ''' Run benchmarks on localhost '''
     bench_params = {
-        'faults': 0,
+        'faults': 3,
         'nodes': 10,
         'workers': 1,
         'rate': 100_000,
@@ -98,7 +98,7 @@ def install(ctx):
 def remote(ctx, burst = 50, debug=False, consensus_only=True, header_size=512_000):
     ''' Run benchmarks on GCP '''
     bench_params = {
-        'faults': 0,
+        'faults': 3,
         'nodes': 10,
         'workers': 1,
         'collocate': True,
